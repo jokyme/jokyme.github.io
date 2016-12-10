@@ -26,7 +26,7 @@ Angular 服务特点:
 单实例 - 每个组件依赖的服务获取到的服务引用，都是从服务工厂创建的单一实例
 
 Angular提供了许多有用的服务(例如 $http), 但是对大多数应用程序而言，我们需要创建自">
-<meta property="og:updated_time" content="2016-12-06T14:26:48.000Z">
+<meta property="og:updated_time" content="2016-12-10T13:38:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始学习AngularJS开发(三) 服务">
 <meta name="twitter:description" content="服务概述Angular服务是一组使用依赖注入装载的可替换对象。你可以使用服务在你的应用程序中组织和分享代码。
@@ -185,7 +185,7 @@ Angular提供了许多有用的服务(例如 $http), 但是对大多数应用程
 </blockquote>
 <h3 id="使用服务"><a href="#使用服务" class="headerlink" title="使用服务"></a>使用服务</h3><p>你需要将服务依赖项添加到依赖于该服务的组件中，以此来使用服务。</p>
 <h3 id="创建服务"><a href="#创建服务" class="headerlink" title="创建服务"></a>创建服务</h3><p>我们可以使用Angular Module，通过注册服务名称和服务工厂方法来自由定义我们的服务。</p>
-<p>服务工厂方法(service factory function)生成的单一对象或方法会在应用程序余下的生命周期中将服务展现给应用程序。服务会将该对象或方法返回(returned)并注入到任何依赖于该服务的组件中(控制器、服务、过滤器 或 指令)</p>
+<p>服务工厂方法(service factory function)生成的单一对象或方法会在应用程序余下的生命周期中将服务展现给应用程序。服务会将该对象或方法返回(returned)并注入到任何依赖于该服务的组件中(控制器、服务、过滤器 或 指令)<br><a id="more"></a></p>
 <h3 id="注册服务"><a href="#注册服务" class="headerlink" title="注册服务"></a>注册服务</h3><p>服务是通过 <code>Module API</code> 被注册到 modules 中的，我们一般使用 <code>Module factory</code> API 来注册服务:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myModule = angular.module(<span class="string">'myModule'</span>, []);</div><div class="line">myModule.factory(<span class="string">'serviceId'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> shinyNewServiceInstance;</div><div class="line">  <span class="comment">// factory function body that constructs shinyNewServiceInstance</span></div><div class="line">  <span class="keyword">return</span> shinyNewServiceInstance;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <blockquote>
@@ -380,7 +380,7 @@ Angular提供了许多有用的服务(例如 $http), 但是对大多数应用程
     </div>
     <script>
 	var yiliaConfig = {
-		mathjax: true,
+		mathjax: false,
 		isHome: false,
 		isPost: true,
 		isArchive: false,
@@ -393,27 +393,6 @@ Angular提供了许多有用的服务(例如 $http), 但是对大多数应用程
 </script>
 
 <script src="/./main.js?v=4.0.0.js"></script>
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
     
