@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="joky">
 <meta property="og:description" content="控制器的概念Angular 中的控制器通过 controller 方法定义。当我们通过 ng-controller 指令将控制器附加到 DOM 时，Angular会使用规定的控制器构造函数实例化一个控制器对象。同时，会创建一个新的子作用域$scope，并将其作为控制器构造函数的可注入参数。
 如果在ng-controller中使用了 controller as [控制器名称] 语法，那么控制器实例将">
-<meta property="og:updated_time" content="2016-12-10T13:38:10.000Z">
+<meta property="og:updated_time" content="2016-12-10T13:40:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始学习AngularJS开发(二) 控制器">
 <meta name="twitter:description" content="控制器的概念Angular 中的控制器通过 controller 方法定义。当我们通过 ng-controller 指令将控制器附加到 DOM 时，Angular会使用规定的控制器构造函数实例化一个控制器对象。同时，会创建一个新的子作用域$scope，并将其作为控制器构造函数的可注入参数。
@@ -169,9 +169,10 @@
 <li>格式化输入 - 使用 Angular 表单控件代替 (angular form controls)</li>
 <li>输出结果过滤 - 使用 Angular 过滤器代替 (angular filters)</li>
 <li>控制器间共享代码或状态 - 使用 Angular 服务代替 (angular services)</li>
-<li>管理其他组件的生命周期(例如：创建服务(service)实例)<a id="more"></a>
-<h3 id="设置-scope-对象的初始状态"><a href="#设置-scope-对象的初始状态" class="headerlink" title="设置 $scope 对象的初始状态"></a>设置 $scope 对象的初始状态</h3>一般而言，当我们创建一个应用程序时，需要为 $scope 设置初始状态。我们通过给 $scope 对象添加属性的方式来设置 $scope 的初始化状态。在属性里面存在视图模型(会在视图中被呈现的模型)。$scope的所有属性均可以在模板中Controller所注册的DOM节点下被访问。</li>
+<li>管理其他组件的生命周期(例如：创建服务(service)实例)</li>
 </ul>
+<a id="more"></a>
+<h3 id="设置-scope-对象的初始状态"><a href="#设置-scope-对象的初始状态" class="headerlink" title="设置 $scope 对象的初始状态"></a>设置 $scope 对象的初始状态</h3><p>一般而言，当我们创建一个应用程序时，需要为 $scope 设置初始状态。我们通过给 $scope 对象添加属性的方式来设置 $scope 的初始化状态。在属性里面存在视图模型(会在视图中被呈现的模型)。$scope的所有属性均可以在模板中Controller所注册的DOM节点下被访问。</p>
 <p>下面的例子展示了,创建一个 GreetingController，并将一个值为 ‘Hola!’ 的 greeting 属性附加到 $scope 的过程</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">'myApp'</span>,[]);</div><div class="line"></div><div class="line">myApp.controller(<span class="string">'GreetingController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>) </span>&#123;</div><div class="line">  $scope.greeting = <span class="string">'Hola!'</span>;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
 <p>我们创建了一个 Angular 模块(Angular Module) - myApp. 然后使用<code>.controller()</code>方法将控制器的构造函数添加到模块中. 这将使控制器的构造函数不在全局作用域之内。</p>
