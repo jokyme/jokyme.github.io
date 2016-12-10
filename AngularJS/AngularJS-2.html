@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://joky.me">
-  <title>joky</title>
+  <title>从零开始学习AngularJS开发(二) 控制器 | joky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录小菜鸡的成长历程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="joky">
-<meta property="og:url" content="http://joky.me/index.html">
+  <meta name="description" content="控制器的概念Angular 中的控制器通过 controller 方法定义。当我们通过 ng-controller 指令将控制器附加到 DOM 时，Angular会使用规定的控制器构造函数实例化一个控制器对象。同时，会创建一个新的子作用域$scope，并将其作为控制器构造函数的可注入参数。
+如果在ng-controller中使用了 controller as [控制器名称] 语法，那么控制器实例将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始学习AngularJS开发(二) 控制器">
+<meta property="og:url" content="http://joky.me/AngularJS/AngularJS-2.html">
 <meta property="og:site_name" content="joky">
-<meta property="og:description" content="记录小菜鸡的成长历程">
+<meta property="og:description" content="控制器的概念Angular 中的控制器通过 controller 方法定义。当我们通过 ng-controller 指令将控制器附加到 DOM 时，Angular会使用规定的控制器构造函数实例化一个控制器对象。同时，会创建一个新的子作用域$scope，并将其作为控制器构造函数的可注入参数。
+如果在ng-controller中使用了 controller as [控制器名称] 语法，那么控制器实例将">
+<meta property="og:updated_time" content="2016-12-06T15:00:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="joky">
-<meta name="twitter:description" content="记录小菜鸡的成长历程">
+<meta name="twitter:title" content="从零开始学习AngularJS开发(二) 控制器">
+<meta name="twitter:description" content="控制器的概念Angular 中的控制器通过 controller 方法定义。当我们通过 ng-controller 指令将控制器附加到 DOM 时，Angular会使用规定的控制器构造函数实例化一个控制器对象。同时，会创建一个新的子作用域$scope，并将其作为控制器构造函数的可注入参数。
+如果在ng-controller中使用了 controller as [控制器名称] 语法，那么控制器实例将">
   
     <link rel="alternative" href="/atom.xml" title="joky" type="application/atom+xml">
   
@@ -140,169 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-AngularJS-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-AngularJS-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/AngularJS/AngularJS-4.html">从零开始学习AngularJS开发(四) 作用域(Scopes)</a>
-    </h1>
-  
-
-        <a href="/AngularJS/AngularJS-4.html" class="archive-article-date">
-  	<time datetime="2016-12-06T14:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="什么是作用域-Scopes"><a href="#什么是作用域-Scopes" class="headerlink" title="什么是作用域(Scopes)"></a>什么是作用域(Scopes)</h3><p>作用域是一个引用应用程序模型的对象。它是表达式的执行上下文。作用域模仿应用程序的DOM结构，按层次结构排列。作用域可以观察表达式以及传播事件。</p>
-<h3 id="作用域特点"><a href="#作用域特点" class="headerlink" title="作用域特点"></a>作用域特点</h3><ul>
-<li>作用域提供接口($watch)来观察模型变化.</li>
-<li>作用域提供接口($apply)将任何不是由Angular触发的事件通过系统传播到视图中(控制器，服务，Angular 事件处理)</li>
-</ul>
-<p>作用域提供接口($apply)从”非Angular领域”()将任何模型的更改从系统传播到视图中</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<i class="icon-book icon"></i>
-	<a class="article-category-link" href="/categories/AngularJS/">AngularJS</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/AngularJS/AngularJS-4.html">Read more... >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJS-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/AngularJS/AngularJS-3.html">从零开始学习AngularJS开发(三) 服务</a>
-    </h1>
-  
-
-        <a href="/AngularJS/AngularJS-3.html" class="archive-article-date">
-  	<time datetime="2016-12-05T13:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="服务概述"><a href="#服务概述" class="headerlink" title="服务概述"></a>服务概述</h3><p>Angular服务是一组使用依赖注入装载的可替换对象。你可以使用服务在你的应用程序中组织和分享代码。</p>
-<p>Angular 服务特点:</p>
-<ul>
-<li>延迟加载 - 只有当应用程序组件依赖于某一服务时，Angular才会实例化该服务</li>
-<li>单实例 - 每个组件依赖的服务获取到的服务引用，都是从服务工厂创建的单一实例</li>
-</ul>
-<p>Angular提供了许多有用的服务(例如 $http), 但是对大多数应用程序而言，我们需要创建自己的服务。</p>
-<blockquote>
-<p>注意：和其他的核心Angular标识符一样，内置服务总是以 $ 符号开头(例如 $http)</p>
-</blockquote>
-<h3 id="使用服务"><a href="#使用服务" class="headerlink" title="使用服务"></a>使用服务</h3><p>你需要将服务依赖项添加到依赖于该服务的组件中，以此来使用服务。</p>
-<h3 id="创建服务"><a href="#创建服务" class="headerlink" title="创建服务"></a>创建服务</h3><p>我们可以使用Angular Module，通过注册服务名称和服务工厂方法来自由定义我们的服务。</p>
-<p>服务工厂方法(service factory function)生成的单一对象或方法会在应用程序余下的生命周期中将服务展现给应用程序。服务会将该对象或方法返回(returned)并注入到任何依赖于该服务的组件中(控制器、服务、过滤器 或 指令)</p>
-<h3 id="注册服务"><a href="#注册服务" class="headerlink" title="注册服务"></a>注册服务</h3><p>服务是通过 <code>Module API</code> 被注册到 modules 中的，我们一般使用 <code>Module factory</code> API 来注册服务:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myModule = angular.module(<span class="string">'myModule'</span>, []);</div><div class="line">myModule.factory(<span class="string">'serviceId'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> shinyNewServiceInstance;</div><div class="line">  <span class="comment">// factory function body that constructs shinyNewServiceInstance</span></div><div class="line">  <span class="keyword">return</span> shinyNewServiceInstance;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：该服务实例并不是由你注册的，而是当服务被调用时由工厂服务(factory function)创建的。</p>
-</blockquote>
-<h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><p>服务可以有自己的依赖项。和在控制器中声明依赖项一样，你可以通过在服务的工厂函数签名中指定依赖项的方式来声明服务的依赖项。</p>
-<p>以下示例有两个服务，每个服务都有多个依赖项：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> batchModule = angular.module(<span class="string">'batchModule'</span>, []);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * The `batchLog` service allows for messages to be queued in memory and flushed</div><div class="line"> * to the console.log every 50 seconds.</div><div class="line"> *</div><div class="line"> * @param &#123;*&#125; message Message to be logged.</div><div class="line"> */</div><div class="line">batchModule.factory(<span class="string">'batchLog'</span>, [<span class="string">'$interval'</span>, <span class="string">'$log'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$interval, $log</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> messageQueue = [];</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (messageQueue.length) &#123;</div><div class="line">      $log.log(<span class="string">'batchLog messages: '</span>, messageQueue);</div><div class="line">      messageQueue = [];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// start periodic checking</span></div><div class="line">  $interval(log, <span class="number">50000</span>);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</div><div class="line">    messageQueue.push(message);</div><div class="line">  &#125;</div><div class="line">&#125;]);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * `routeTemplateMonitor` monitors each `$route` change and logs the current</div><div class="line"> * template via the `batchLog` service.</div><div class="line"> */</div><div class="line">batchModule.factory(<span class="string">'routeTemplateMonitor'</span>, [<span class="string">'$route'</span>, <span class="string">'batchLog'</span>, <span class="string">'$rootScope'</span>,</div><div class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">$route, batchLog, $rootScope</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">startMonitoring</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        $rootScope.$on(<span class="string">'$routeChangeSuccess'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">          batchLog($route.current ? $route.current.template : <span class="literal">null</span>);</div><div class="line">        &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;;</div><div class="line">  &#125;]);</div></pre></td></tr></table></figure>
-<p>在这个示例中,有以下几点需要注意:</p>
-<ul>
-<li><code>batchLog</code> 服务依赖于内置的 <code>$interval</code> 和 <code>$log</code> 服务</li>
-<li><code>routeTemplateMonitor</code> 服务依赖于内置的 <code>$route</code> 服务和自定义的 <code>batchLog</code> 服务</li>
-<li>两个服务都使用数组标记法声明他们的依赖项</li>
-<li>数组中标识符的顺序和 <code>factory</code> 函数中参数名称的顺序一致</li>
-</ul>
-<h3 id="使用-provide-注册服务"><a href="#使用-provide-注册服务" class="headerlink" title="使用 $provide 注册服务"></a>使用 <code>$provide</code> 注册服务</h3><p>你可以通过 <code>module</code> 的 <code>config</code> 函数中内置的 <code>$provide</code> 服务来注册服务</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'myModule'</span>, []).config([<span class="string">'$provide'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$provide</span>) </span>&#123;</div><div class="line">  $provide.factory(<span class="string">'serviceId'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> shinyNewServiceInstance;</div><div class="line">    <span class="comment">// factory function body that constructs shinyNewServiceInstance</span></div><div class="line">    <span class="keyword">return</span> shinyNewServiceInstance;</div><div class="line">  &#125;);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
-<p>这一技术常被用于在单元测试中模拟出一个服务的依赖项</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<i class="icon-book icon"></i>
-	<a class="article-category-link" href="/categories/AngularJS/">AngularJS</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/AngularJS/AngularJS-3.html">Read more... >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJS-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/AngularJS/AngularJS-2.html">从零开始学习AngularJS开发(二) 控制器</a>
+    <h1 class="article-title" itemprop="name">
+      从零开始学习AngularJS开发(二) 控制器
     </h1>
   
 
@@ -347,6 +196,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -364,150 +234,90 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/AngularJS/AngularJS-2.html">Read more... >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJS-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/AngularJS/AngularJS-1.html">从零开始学习AngularJS开发(一) 概述</a>
-    </h1>
-  
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
-        <a href="/AngularJS/AngularJS-1.html" class="archive-article-date">
-  	<time datetime="2016-12-04T15:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="AngularJS概述"><a href="#AngularJS概述" class="headerlink" title="AngularJS概述"></a>AngularJS概述</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">概念</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">模板(Template)</td>
-<td style="text-align:center">带有附加标记的HTML</td>
-</tr>
-<tr>
-<td style="text-align:center">指令(Directives)</td>
-<td style="text-align:center">自定义属性和元素来扩展HTML</td>
-</tr>
-<tr>
-<td style="text-align:center">模型(Model)</td>
-<td style="text-align:center">显示给用户，跟用户进行交互的数据</td>
-</tr>
-<tr>
-<td style="text-align:center">作用域(Scope)</td>
-<td style="text-align:center">model存放在scope中以便控制器(Controllers)，指令(Directives)和表达式(expressions)访问</td>
-</tr>
-<tr>
-<td style="text-align:center">表达式(Expressions)</td>
-<td style="text-align:center">用于访问scope中的变量和函数</td>
-</tr>
-<tr>
-<td style="text-align:center">编译器(Compiler)</td>
-<td style="text-align:center">解析模板，实例化指令和表达式</td>
-</tr>
-<tr>
-<td style="text-align:center">过滤器(Filter)</td>
-<td style="text-align:center">格式化表达式的值</td>
-</tr>
-<tr>
-<td style="text-align:center">视图(View)</td>
-<td style="text-align:center">页面(DOM)</td>
-</tr>
-<tr>
-<td style="text-align:center">数据绑定(Data Binding)</td>
-<td style="text-align:center">在模型和视图间同步数据</td>
-</tr>
-<tr>
-<td style="text-align:center">控制器(Controller)</td>
-<td style="text-align:center">视图背后的业务逻辑</td>
-</tr>
-<tr>
-<td style="text-align:center">依赖注入(Dependency Injector)</td>
-<td style="text-align:center">负责创建和装载对象和函数</td>
-</tr>
-<tr>
-<td style="text-align:center">注入器(Injector)</td>
-<td style="text-align:center">依赖注入容器</td>
-</tr>
-<tr>
-<td style="text-align:center">模块(Module)</td>
-<td style="text-align:center">用来配置注入器的容器</td>
-</tr>
-<tr>
-<td style="text-align:center">服务(Service)</td>
-<td style="text-align:center">独立于视图的可复用的业务逻辑</td>
-</tr>
-</tbody>
-</table>
-
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://joky.me/AngularJS/AngularJS-2.html" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
-	</div>
+</div>
 
-      
-	<div class="article-category tagcloud">
-	<i class="icon-book icon"></i>
-	<a class="article-category-link" href="/categories/AngularJS/">AngularJS</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/AngularJS/AngularJS-1.html">Read more... >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
-
-
-
+  
+<nav id="article-nav">
+  
+    <a href="/AngularJS/AngularJS-3.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          从零开始学习AngularJS开发(三) 服务
+        
+      </div>
+    </a>
   
   
+    <a href="/AngularJS/AngularJS-1.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从零开始学习AngularJS开发(一) 概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
 
 
           </div>
@@ -529,8 +339,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

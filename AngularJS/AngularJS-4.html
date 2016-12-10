@@ -6,21 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://joky.me">
-  <title>Hello World | joky</title>
+  <title>从零开始学习AngularJS开发(四) 作用域(Scopes) | joky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="什么是作用域(Scopes)作用域是一个引用应用程序模型的对象。它是表达式的执行上下文。作用域模仿应用程序的DOM结构，按层次结构排列。作用域可以观察表达式以及传播事件。
+作用域特点
+作用域提供接口($watch)来观察模型变化.
+作用域提供接口($apply)将任何不是由Angular触发的事件通过系统传播到视图中(控制器，服务，Angular 事件处理)
+
+作用域提供接口($apply)从”非">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://joky.me/uncategorized/hello-world.html">
+<meta property="og:title" content="从零开始学习AngularJS开发(四) 作用域(Scopes)">
+<meta property="og:url" content="http://joky.me/AngularJS/AngularJS-4.html">
 <meta property="og:site_name" content="joky">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-12-10T06:41:49.000Z">
+<meta property="og:description" content="什么是作用域(Scopes)作用域是一个引用应用程序模型的对象。它是表达式的执行上下文。作用域模仿应用程序的DOM结构，按层次结构排列。作用域可以观察表达式以及传播事件。
+作用域特点
+作用域提供接口($watch)来观察模型变化.
+作用域提供接口($apply)将任何不是由Angular触发的事件通过系统传播到视图中(控制器，服务，Angular 事件处理)
+
+作用域提供接口($apply)从”非">
+<meta property="og:updated_time" content="2016-12-08T13:59:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="从零开始学习AngularJS开发(四) 作用域(Scopes)">
+<meta name="twitter:description" content="什么是作用域(Scopes)作用域是一个引用应用程序模型的对象。它是表达式的执行上下文。作用域模仿应用程序的DOM结构，按层次结构排列。作用域可以观察表达式以及传播事件。
+作用域特点
+作用域提供接口($watch)来观察模型变化.
+作用域提供接口($apply)将任何不是由Angular触发的事件通过系统传播到视图中(控制器，服务，Angular 事件处理)
+
+作用域提供接口($apply)从”非">
   
     <link rel="alternative" href="/atom.xml" title="joky" type="application/atom+xml">
   
@@ -144,33 +156,30 @@ Quick">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-AngularJS-4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      从零开始学习AngularJS开发(四) 作用域(Scopes)
     </h1>
   
 
-        <a href="/uncategorized/hello-world.html" class="archive-article-date">
-  	<time datetime="2016-12-10T05:55:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-10</time>
+        <a href="/AngularJS/AngularJS-4.html" class="archive-article-date">
+  	<time datetime="2016-12-06T14:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-06</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h3 id="什么是作用域-Scopes"><a href="#什么是作用域-Scopes" class="headerlink" title="什么是作用域(Scopes)"></a>什么是作用域(Scopes)</h3><p>作用域是一个引用应用程序模型的对象。它是表达式的执行上下文。作用域模仿应用程序的DOM结构，按层次结构排列。作用域可以观察表达式以及传播事件。</p>
+<h3 id="作用域特点"><a href="#作用域特点" class="headerlink" title="作用域特点"></a>作用域特点</h3><ul>
+<li>作用域提供接口($watch)来观察模型变化.</li>
+<li>作用域提供接口($apply)将任何不是由Angular触发的事件通过系统传播到视图中(控制器，服务，Angular 事件处理)</li>
+</ul>
+<p>作用域提供接口($apply)从”非Angular领域”()将任何模型的更改从系统传播到视图中</p>
 
       
 
@@ -200,7 +209,17 @@ Quick">
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+	<i class="icon-book icon"></i>
+	<a class="article-category-link" href="/categories/AngularJS/">AngularJS</a>
+	</div>
+
 
       
 
@@ -250,7 +269,7 @@ Quick">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://joky.me/uncategorized/hello-world.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://joky.me/AngularJS/AngularJS-4.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,6 +281,16 @@ Quick">
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/AngularJS/AngularJS-3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从零开始学习AngularJS开发(三) 服务</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -319,6 +348,10 @@ Quick">
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">AngularJS</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
